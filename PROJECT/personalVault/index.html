@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Vault</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 100px 50px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+            max-width: 600px;
+            margin: 100px auto 50px;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideIn 2s ease;
+            position: relative;
+        }
+
+        h1 span {
+            display: inline-block;
+            opacity: 0;
+            animation: fadeText 1s forwards;
+        }
+
+        h1 span:nth-child(1) { animation-delay: 0.2s; }
+        h1 span:nth-child(2) { animation-delay: 0.4s; }
+        h1 span:nth-child(3) { animation-delay: 0.6s; }
+        h1 span:nth-child(4) { animation-delay: 0.8s; }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInText 3s ease-in-out;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            font-size: 1rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+            color: #fff;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #f1c40f;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeText {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: url('wave.svg') repeat-x;
+            animation: wave 5s infinite linear;
+            opacity: 0.7;
+        }
+
+        @keyframes wave {
+            0% { background-position: 0; }
+            100% { background-position: 1600px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+        <a href="about.html">About Us</a>
+    </nav>
+
+    <div class="container" id="home">
+        <h1>
+            <span>P</span><span>e</span><span>r</span><span>sonal Data Vault</span>
+        </h1>
+        <p>Securely store and manage your important documents and personal data. Access it anytime, anywhere with just a few clicks.</p>
+
+        <div class="buttons">
+            <a href="register.html" class="btn">Register</a>
+            <a href="login.html" class="btn">Login</a>
+        </div>
+    </div>
+
+    <div class="wave"></div>
+
+    <footer>
+        <p>&copy; 2024 Personal Data Vault. All rights reserved.</p>
+        <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a> | <a href="#contact">Contact Us</a>
+    </footer>
+</body>
+</html>
